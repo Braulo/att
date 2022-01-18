@@ -1,0 +1,32 @@
+<nav class="navbar">
+  <ul class="links">
+    <li [routerLink]="['winner']" routerLinkActive="active"><h2>Winner</h2></li>
+    <li [routerLink]="['match']" routerLinkActive="active"><h2>Match</h2></li>
+    <li [routerLink]="['history']" routerLinkActive="active"><h2>History</h2></li>
+  </ul>
+  <ul class="options">
+    <li>
+      <button mat-raised-button color="primary" (click)="endMatch()">
+        <div style="display: flex">
+          End match
+          <mat-spinner color="accent" *ngIf="this.isEndingMatch | async" [diameter]="35"></mat-spinner>
+        </div>
+      </button>
+    </li>
+    <li>
+      <div *ngIf="this.currentAddress | async; else connect">
+        <p>{{ this.currentAddress | async }} {{ balance | async }}Eth</p>
+      </div>
+      <ng-template #connect>
+        <button mat-raised-button color="primary" (click)="connectWallet()">Connect wallet</button>
+      </ng-template>
+    </li>
+    <li>
+      <button color="foreground" mat-icon-button (click)="toggleTheme()">
+        <mat-icon class="icon" onselectstart="return false" aria-hidden="false">
+          {{ this.currentTheme === 'dark-theme' ? 'brightness_high' : 'bedtime' }}</mat-icon
+        >
+      </button>
+    </li>
+  </ul>
+</nav>

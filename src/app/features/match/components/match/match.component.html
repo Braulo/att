@@ -1,0 +1,4 @@
+<div class="match-wrapper">
+  <att-add-text *ngIf="!(this.hasEntered$ | async)"></att-add-text>
+  <att-current-match *ngIf="this.hasEntered$ | async"> </att-current-match>
+</div>

@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+@mixin app-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, danger);
+  $background: mat.get-color-from-palette(map-get($theme, background), background);
+  $foreground: mat.get-color-from-palette(map-get($theme, foreground), foreground);
+
+  .main {
+    background-color: $background;
+    color: $foreground;
+
+    .content {
+      height: 95vh;
+      overflow: auto;
+    }
+  }
+}

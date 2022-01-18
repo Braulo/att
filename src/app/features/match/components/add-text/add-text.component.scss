@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+
+@mixin add-text-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, danger);
+  $background: mat.get-color-from-palette(map-get($theme, background), background);
+  $foreground: mat.get-color-from-palette(map-get($theme, foreground), foreground);
+
+  .add-text-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      textarea {
+        border-radius: 1rem;
+        padding: 1rem;
+        resize: none;
+        outline: none;
+        box-shadow: none;
+        background-color: mat-color($accent);
+        color: $foreground;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="add-text-wrapper">
+  <h2>Write some nice Text :)</h2>
+  <form id="textinputform" [formGroup]="addTextForm" (submit)="submit()">
+    <textarea formControlName="textInputValue" name="textValue" cols="40" rows="15"></textarea>
+  </form>
+  <button mat-raised-button form="textinputform" type="submit" [disabled]="!addTextForm.valid" color="primary">
+    Add Text
+  </button>
+  <mat-spinner color="accent" *ngIf="this.showSpinner | async"></mat-spinner>
+</div>

@@ -1,0 +1,7 @@
+<div class="winner-wrapper">
+  <h1>Current winner</h1>
+  <div class="winner-box">
+    <h2>{{ (this.currentWinner | async)?.user }}</h2>
+    <h2>{{ (this.currentWinner | async)?.value }}</h2>
+  </div>
+</div>

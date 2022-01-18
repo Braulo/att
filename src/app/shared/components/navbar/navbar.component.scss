@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+
+@mixin navbar-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, danger);
+  $background: mat.get-color-from-palette(map-get($theme, background), background);
+  $foreground: mat.get-color-from-palette(map-get($theme, foreground), foreground);
+
+  .navbar {
+    height: 100%;
+    min-height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .active {
+      color: mat-color($primary);
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      li {
+        cursor: pointer;
+        margin: 0.5rem;
+        align-self: center;
+      }
+    }
+  }
+}

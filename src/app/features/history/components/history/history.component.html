@@ -1,0 +1,13 @@
+<div class="history-wrapper">
+  <h1>All past winners</h1>
+  <div class="winner-list">
+    <ul *ngIf="this.pastWinners | async as winners">
+      <li *ngFor="let winner of winners">
+        <h2 matTooltip="Text: {{ winner.value }}">
+          {{ winner.user }}
+        </h2>
+        <br />
+      </li>
+    </ul>
+  </div>
+</div>

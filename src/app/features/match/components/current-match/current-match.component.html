@@ -1,0 +1,26 @@
+<div class="current-match-wrapper">
+  <p *ngIf="this.hasEntered | async">you have already entered</p>
+  <h2>All participants for this match week</h2>
+  <div class="participants">
+    <ul>
+      <div *ngIf="this.allUserEntriesFromCurrentMatch | async as userEntries">
+        <li *ngFor="let userEntry of userEntries">
+          <div *ngIf="userEntry.value" class="user-entry">
+            <h2 matTooltip="{{ userEntry.user }}">{{ userEntry.value }}</h2>
+            <div class="rating">
+              <button mat-button (click)="upvote(userEntry.user)">
+                <mat-icon class="icon" onselectstart="return false" aria-hidden="false">thumb_up</mat-icon>
+                <p>{{ userEntry.upvotes }}</p>
+              </button>
+              <button mat-button (click)="downvote(userEntry.user)">
+                <mat-icon class="icon" onselectstart="return false" aria-hidden="false">thumb_down</mat-icon>
+                <p>{{ userEntry.downvotes }}</p>
+              </button>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+  <mat-spinner color="primary" *ngIf="this.isLoadingVotes | async" [diameter]="35"></mat-spinner>
+</div>
