@@ -5,7 +5,7 @@ import { catchError, from, map, of, switchMap, withLatestFrom } from 'rxjs';
 import { SnackbarService } from 'src/app/shared/snackbar.service';
 import { Web3Service } from '../../web3/services/web3.service';
 import { getCurrentAddress } from '../../web3/StoreWeb3/web3.selectors';
-import * as WinnerActions from '../WinnerStore/winner.actions';
+import * as WinnerActions from './winner.actions';
 
 @Injectable()
 export class WinnerEffects {

@@ -1,5 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import * as HistoryActions from '../HistoryStore/history.actions';
+import * as HistoryActions from './history.actions';
 
 export interface HistoryState {
   pastWinners: [{ user: string; value: string }];

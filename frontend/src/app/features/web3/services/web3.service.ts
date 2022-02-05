@@ -5,7 +5,7 @@ import { SnackbarService } from 'src/app/shared/snackbar.service';
 import Web3 from 'web3';
 import { changeAddressAction, getAddressAction } from '../StoreWeb3/web3.actions';
 import { Contract } from 'web3-eth-contract';
-import AttentionsContractJSON from '../../../../../Ethereum/build/contracts/Attentions.json';
+import AttentionsContractJSON from '../../../../../../ethereum/build/contracts/Attentions.json';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

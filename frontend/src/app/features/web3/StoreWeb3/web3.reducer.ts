@@ -1,5 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import * as Web3Actions from '../StoreWeb3/web3.actions';
+import * as Web3Actions from './web3.actions';
 
 export interface Web3State {
   address: string;
