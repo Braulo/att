@@ -12,10 +12,14 @@ services:
     image: node:16
     ports:
       - '8545:8545'
-    command: bash -c "npm i -g ganache-cli && ganache-cli -h 0.0.0.0"
+    command: bash -c "npm i -g ganache-cli && ganache-cli --db /database -h 0.0.0.0"
+    volumes:
+      - database:/database
   ethereum:
     build: ./ethereum/.
     depends_on:
       - testchain
     volumes:
       - ./frontend/ethereum:/app/build
+volumes:
+  database:
