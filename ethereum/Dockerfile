@@ -8,4 +8,4 @@ RUN npm i
 
 RUN npm i -g truffle
 
-CMD bash -c "truffle compile ; truffle migrate --reset; truffle migrate --network development"
+CMD bash -c "truffle compile; truffle migrate --reset; truffle migrate --network development"

@@ -1,11 +1,14 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import AttentionsContractJSON from '../../ethereum/contracts/Attentions.json';
 
 export const environment = {
   production: false,
-  // attentionsContractAddress: '0x2Ce260E44AE7A28019CBe23042293fFcb8564d1f',
-  attentionsContractAddress: '0xe6aaB015c97428fA8779658B6719cD612FE94c1C',
+  attentionsContractAddress:
+    AttentionsContractJSON.networks[
+      Object.keys(AttentionsContractJSON.networks)[Object.keys(AttentionsContractJSON.networks).length - 1]
+    ].address,
 };
 
 /*

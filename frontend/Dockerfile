@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY . . 
 
-WORKDIR /app/frontend
-
 RUN npm i
 
 RUN npm i -g @angular/cli

@@ -4,7 +4,7 @@ import { WinnerComponent } from './components/winner/winner.component';
 
 const routes: Routes = [
   {
-    path: '**',
+    path: '',
     component: WinnerComponent,
   },
 ];
