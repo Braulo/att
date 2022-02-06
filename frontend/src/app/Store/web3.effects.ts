@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { catchError, map, switchMap, withLatestFrom } from 'rxjs/operators';
+import { catchError, map, switchMap } from 'rxjs/operators';
 import { from, of } from 'rxjs';
 import * as Web3Actions from './web3.actions';
-import { Web3Service } from '../services/web3.service';
 import { Store } from '@ngrx/store';
-import { checkIfEntered } from '../../match/StoreMatch/match.actions';
+import { checkIfEntered } from '../../app/features/match/StoreMatch/match.actions';
+import { Web3Service } from '../shared/services/web3.service';
 
 @Injectable()
 export class Web3Effects {
@@ -48,6 +48,7 @@ export class Web3Effects {
         map(({ address }) => {
           this.store.dispatch(checkIfEntered({ address }));
           this.store.dispatch(Web3Actions.getBalanceFromAddressAction({ address: address }));
+          window.location.reload();
         }),
       ),
     {

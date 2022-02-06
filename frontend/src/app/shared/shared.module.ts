@@ -10,13 +10,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { Web3Module } from '../features/web3/web3.module';
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -29,11 +26,9 @@ import { Web3Module } from '../features/web3/web3.module';
     MatSnackBarModule,
     MatSelectModule,
     MatTooltipModule,
-    Web3Module,
     MatProgressSpinnerModule,
   ],
   exports: [
-    NavbarComponent,
     HttpClientModule,
     MatButtonModule,
     MatDialogModule,
@@ -42,7 +37,6 @@ import { Web3Module } from '../features/web3/web3.module';
     MatSnackBarModule,
     MatSelectModule,
     MatTooltipModule,
-    Web3Module,
     MatProgressSpinnerModule,
     MatIconModule,
   ],

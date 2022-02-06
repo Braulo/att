@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { catchError, map, switchMap, withLatestFrom } from 'rxjs/operators';
+import { catchError, map, switchMap } from 'rxjs/operators';
 import { from, of } from 'rxjs';
 import * as HistoryActions from './history.actions';
-import { Store } from '@ngrx/store';
-import { Web3Service } from '../../web3/services/web3.service';
+import { Web3Service } from 'src/app/shared/services/web3.service';
 
 @Injectable()
 export class HistoryEffect {
@@ -22,5 +21,5 @@ export class HistoryEffect {
     ),
   );
 
-  constructor(private actions$: Actions, private web3Service: Web3Service, private store: Store) {}
+  constructor(private actions$: Actions, private web3Service: Web3Service) {}
 }

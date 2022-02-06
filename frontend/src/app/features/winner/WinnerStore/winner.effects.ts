@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
 import { catchError, from, map, of, switchMap, withLatestFrom } from 'rxjs';
+import { Web3Service } from 'src/app/shared/services/web3.service';
 import { SnackbarService } from 'src/app/shared/snackbar.service';
-import { Web3Service } from '../../web3/services/web3.service';
-import { getCurrentAddress } from '../../web3/StoreWeb3/web3.selectors';
+import { getCurrentAddress } from '../../../Store/web3.selectors';
 import * as WinnerActions from './winner.actions';
 
 @Injectable()

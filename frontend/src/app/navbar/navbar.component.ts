@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Web3Service } from 'src/app/features/web3/services/web3.service';
-import { getBalanceOfCurrentAddress, getCurrentAddress } from 'src/app/features/web3/StoreWeb3/web3.selectors';
+import { getBalanceOfCurrentAddress, getCurrentAddress } from '../Store/web3.selectors';
 import { endMatchAction } from 'src/app/features/winner/WinnerStore/winner.actions';
 import { selectIsEndingMatch } from 'src/app/features/winner/WinnerStore/winner.selectors';
+import { Web3Service } from '../shared/services/web3.service';
 
 @Component({
   selector: 'att-navbar',

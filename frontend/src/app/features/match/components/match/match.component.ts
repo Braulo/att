@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getCurrentAddress } from 'src/app/features/web3/StoreWeb3/web3.selectors';
 import { UserEntry } from 'src/app/shared/Models/UserEntry';
+import { getCurrentAddress } from 'src/app/Store/web3.selectors';
 import { checkIfEntered } from '../../StoreMatch/match.actions';
 import { getHasEntered, selectMatchUserEntries } from '../../StoreMatch/match.selectors';
 

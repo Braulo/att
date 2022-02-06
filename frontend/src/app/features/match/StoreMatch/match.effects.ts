@@ -4,9 +4,9 @@ import { catchError, map, mergeMap, switchMap, withLatestFrom } from 'rxjs/opera
 import { forkJoin, from, of } from 'rxjs';
 import * as MatchActions from './match.actions';
 import { Store } from '@ngrx/store';
-import { Web3Service } from '../../web3/services/web3.service';
-import { getCurrentAddress } from '../../web3/StoreWeb3/web3.selectors';
 import { SnackbarService } from 'src/app/shared/snackbar.service';
+import { getCurrentAddress } from 'src/app/Store/web3.selectors';
+import { Web3Service } from 'src/app/shared/services/web3.service';
 
 @Injectable()
 export class MatchEffects {

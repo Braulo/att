@@ -3,9 +3,9 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import { Store } from '@ngrx/store';
 import { SnackbarService } from 'src/app/shared/snackbar.service';
 import Web3 from 'web3';
-import { changeAddressAction, getAddressAction } from '../StoreWeb3/web3.actions';
+import { changeAddressAction, getAddressAction } from '../../Store/web3.actions';
 import { Contract } from 'web3-eth-contract';
-import AttentionsContractJSON from '../../../../../ethereum/contracts/Attentions.json';
+import AttentionsContractJSON from '../../../../ethereum/contracts/Attentions.json';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -24,7 +24,6 @@ export class Web3Service {
       this.web3 = new Web3(this.provider);
       this.registerMetamaskEvents();
       this.initContracts();
-      // await this.web3.eth.requestAccounts();
 
       this.store.dispatch(getAddressAction());
       return true;
@@ -43,7 +42,6 @@ export class Web3Service {
 
   private registerMetamaskEvents() {
     this.provider.on('accountsChanged', async (accounts: string[]) => {
-      // const balance = await this.web3.eth.getBalance(accounts[0]);
       this.store.dispatch(changeAddressAction({ address: accounts[0] }));
     });
 
