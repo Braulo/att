@@ -4,7 +4,7 @@ Just a simple dApp
 => made with truffle / web3.js 
 
 See this app in action :) 
-=> https://ipfs.io/ipfs/QmWggLsFxi1NsQb8tkmhGzJQc9kMcBXMFxdEUjNXqvPXNdfilename=winner
+=> https://ipfs.io/ipfs/QmWggLsFxi1NsQb8tkmhGzJQc9kMcBXMFxdEUjNXqvPXNd?filename=winner
 
 You can find the Main Contract for this dApp on the Ropsten test network 
 => 0xe6aaB015c97428fA8779658B6719cD612FE94c1C
