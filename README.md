@@ -1,4 +1,4 @@
-# ATT (Just a dApp game where you can write any text -> put it on a blockchain -> upvote other texts)
+# ATT (Just a dApp game where you can write any text then put it on a blockchain and then upvote other texts)
 
 ### TL;DR
 Just a dApp game where you can write some text safe it on a blockchain and then upvote/downvote other texts. 
