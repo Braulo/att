@@ -1,7 +1,7 @@
 # ATT (Just a dApp game where you can write any text then put it on a blockchain and then upvote other texts)
 
 ### TL;DR
-Just a dApp game where you can write some text safe it on a blockchain and then upvote/downvote other texts. 
+Just a simple game where you can write some text safe it on a blockchain and then upvote/downvote other texts. 
 The Text that hat the most upvotes after 1 day will get put in the 'hall of fame' and the text will be shown for all users.
 
 See this app in action :) <br>
