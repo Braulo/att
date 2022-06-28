@@ -4,10 +4,10 @@
 Just a dApp game where you can write some text safe it on a blockchain and then upvote/downvote other texts. 
 The Text that hat the most upvotes after 1 day will get put in the 'hall of fame' and the text will be shown for all users.
 
-See this app in action :) 
+See this app in action :) <br>
 => https://ipfs.io/ipfs/QmWggLsFxi1NsQb8tkmhGzJQc9kMcBXMFxdEUjNXqvPXNd?filename=winner
 
-You can find the Main Contract for this dApp on the Ropsten test network 
+You can find the Main Contract for this dApp on the Ropsten test network <br>
 => 0xe6aaB015c97428fA8779658B6719cD612FE94c1C
 
 ### Deployment/ Development
