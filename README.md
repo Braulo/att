@@ -2,7 +2,7 @@
 
 ### TL;DR
 Just a simple game where you can write some text safe it on a blockchain and then upvote/downvote other texts. 
-The Text that hat the most upvotes after 1 day will get put in the 'hall of fame' and the text will be shown for all users.
+The Text that has the most upvotes after 1 day will get put in the 'winners list' and the text will be shown for all users.
 
 See this app in action :) <br>
 => https://ipfs.io/ipfs/QmWggLsFxi1NsQb8tkmhGzJQc9kMcBXMFxdEUjNXqvPXNd?filename=winner
