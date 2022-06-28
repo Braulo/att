@@ -12,8 +12,6 @@ You can find the Main Contract for this dApp on the Ropsten test network <br>
 
 ### Deployment/ Development
 
-Well just use Docker :)
-
 ```bash
 > docker-compose up...
 ```
